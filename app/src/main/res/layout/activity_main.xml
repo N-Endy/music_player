@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black_background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        style="@style/header"
+        android:background="@color/primary_background">
+
+        <TextView
+            style="@style/header_text"
+            android:text="@string/music_player"
+            android:textColor="@color/black_background"/>
+
+    </LinearLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        style="@style/grid">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/home_album"
+            style="@style/cardViewStyle">
+
+            <RelativeLayout
+                style="@style/relativeViewStyle"
+                android:background="@color/primary_background">
+
+                <ImageView
+                    android:id="@+id/home_album_image"
+                    style="@style/imageViewStyle"
+                    android:src="@drawable/album" />
+
+                <TextView
+                    android:id="@+id/home_album_text"
+                    android:layout_below="@id/home_album_image"
+                    android:text="@string/albums"
+                    style="@style/textViewStyle"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/home_library"
+            style="@style/cardViewStyle">
+
+            <RelativeLayout
+                style="@style/relativeViewStyle"
+                android:background="@color/library">
+
+                <ImageView
+                    android:id="@+id/home_library_image"
+                    style="@style/imageViewStyle"
+                    android:src="@drawable/library" />
+
+                <TextView
+                    android:id="@+id/home_library_text"
+                    android:layout_below="@id/home_library_image"
+                    android:text="@string/library"
+                    style="@style/textViewStyle"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/cardViewStyle">
+
+            <RelativeLayout
+                style="@style/relativeViewStyle"
+                android:background="@color/favorite">
+
+                <ImageView
+                    android:id="@+id/home_favorite_image"
+                    style="@style/imageViewStyle"
+                    android:src="@drawable/favorite" />
+
+                <TextView
+                    android:id="@+id/home_favorite_text"
+                    android:layout_below="@id/home_favorite_image"
+                    android:text="@string/favorite"
+                    style="@style/textViewStyle"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/cardViewStyle">
+
+            <RelativeLayout
+                style="@style/relativeViewStyle"
+                android:background="@color/recent_play">
+
+                <ImageView
+                    android:id="@+id/home_recentplay_image"
+                    style="@style/imageViewStyle"
+                    android:src="@drawable/recentplay" />
+
+                <TextView
+                    android:id="@+id/home_recentplay_text"
+                    android:layout_below="@id/home_recentplay_image"
+                    android:text="@string/recent_play"
+                    style="@style/textViewStyle"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/cardViewStyle">
+
+            <RelativeLayout
+                style="@style/relativeViewStyle"
+                android:background="@color/recent_add">
+
+                <ImageView
+                    android:id="@+id/home_recentadd_image"
+                    style="@style/imageViewStyle"
+                    android:src="@drawable/recentadd" />
+
+                <TextView
+                    android:id="@+id/home_recentadd_text"
+                    style="@style/textViewStyle"
+                    android:layout_below="@id/home_recentadd_image"
+                    android:text="@string/recent_add"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            style="@style/cardViewStyle">
+
+            <RelativeLayout
+                style="@style/relativeViewStyle"
+                android:background="@color/most_played">
+
+                <ImageView
+                    android:id="@+id/home_mostplay_image"
+                    style="@style/imageViewStyle"
+                    android:src="@drawable/mostplay" />
+
+                <TextView
+                    android:id="@+id/home_mostplay_text"
+                    style="@style/textViewStyle"
+                    android:layout_below="@id/home_mostplay_image"
+                    android:text="@string/most_play"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</LinearLayout>

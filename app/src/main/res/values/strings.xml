@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="music_player">Nelson\'s Music Player</string>
+    <string name="albums">Albums</string>
+    <string name="library">Library</string>
+    <string name="favorite">Favorite</string>
+    <string name="recent_play">Recent Play</string>
+    <string name="recent_add">Recent Add</string>
+    <string name="most_play">Most Play</string>
+</resources>
