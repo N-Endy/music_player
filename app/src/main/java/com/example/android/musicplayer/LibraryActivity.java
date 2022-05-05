@@ -22,16 +22,22 @@ public class LibraryActivity extends AppCompatActivity {
 
         // Create an ArrayList of Library objects
         ArrayList<Library> songs = new ArrayList<>();
-        songs.add(new Library("Donut", "1.6", R.drawable.mostplay));
-        songs.add(new Library("Eclair", "2.0-2.1", R.drawable.mostplay));
-        songs.add(new Library("Froyo", "2.2-2.2.3", R.drawable.mostplay));
-        songs.add(new Library("GingerBread", "2.3-2.3.7", R.drawable.mostplay));
-        songs.add(new Library("Honeycomb", "3.0-3.2.6", R.drawable.mostplay));
-        songs.add(new Library("Ice Cream Sandwich", "4.0-4.0.4", R.drawable.mostplay));
-        songs.add(new Library("Jelly Bean", "4.1-4.3.1", R.drawable.mostplay));
-        songs.add(new Library("KitKat", "4.4-4.4.4", R.drawable.mostplay));
-        songs.add(new Library("Lollipop", "5.0-5.1.1", R.drawable.mostplay));
-        songs.add(new Library("Marshmallow", "6.0-6.0.1", R.drawable.mostplay));
+        songs.add(new Library("Easy On Me", "Adele", R.drawable.mostplay));
+        songs.add(new Library("Jon Bellion", "All Time Low", R.drawable.mostplay));
+        songs.add(new Library("Chike", "Amen", R.drawable.mostplay));
+        songs.add(new Library("Novo Amor", "Anchor", R.drawable.mostplay));
+        songs.add(new Library("Calum Scott", "Dancing On My Own", R.drawable.mostplay));
+        songs.add(new Library("Simi", "Duduke", R.drawable.mostplay));
+        songs.add(new Library("Wizkid", "Essence", R.drawable.mostplay));
+        songs.add(new Library("Ladipoe (feat Buju)", "Feeling", R.drawable.mostplay));
+        songs.add(new Library("Harry Styles", "Watermelon", R.drawable.mostplay));
+        songs.add(new Library("Tems", "Interference", R.drawable.mostplay));
+        songs.add(new Library("Labrinth", "Jealous", R.drawable.mostplay));
+        songs.add(new Library("Joeboy", "Lonely", R.drawable.mostplay));
+        songs.add(new Library("James Authur", "Naked", R.drawable.mostplay));
+        songs.add(new Library("Burna Boy", "Onyeka", R.drawable.mostplay));
+        songs.add(new Library("The Weekend", "I Feel It Coming", R.drawable.mostplay));
+        songs.add(new Library("Travis Greene", "Made A Way", R.drawable.mostplay));
 
         // Create an {@link LibraryAdapter}, whose data source is a list of
         // {@link Library}s. The adapter knows how to create list item views for each item

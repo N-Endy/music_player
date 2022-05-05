@@ -4,25 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_background"
     android:orientation="vertical"
     android:weightSum="100"
-    android:layout_margin="16dp"
     tools:context=".PlayActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="90"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginTop="50dp"
+        android:layout_marginRight="16dp"
+        android:layout_weight="90"
         app:cardCornerRadius="35dp">
         <ImageView
             android:id="@+id/play_song_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_launcher_background"
-            android:scaleType="centerCrop"/>
+            android:background="@color/purple_200"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground"/>
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -31,30 +32,34 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="48dp"
-        android:textSize="24sp"
-        android:textColor="@color/black"
-        android:text=""/>
+        android:fontFamily="sans-serif-medium"
+        android:text=""
+        android:textColor="@color/teal_200"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/play_song_artiste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:text=""/>
+        android:fontFamily="sans-serif-medium"
+        android:text=""
+        android:textColor="@color/teal_700"
+        android:textSize="16sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="100"
+        android:layout_margin="16dp"
         android:gravity="center"
-        android:layout_margin="16dp">
+        android:orientation="horizontal"
+        android:weightSum="100">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0:34"/>
+            android:fontFamily="sans-serif-medium"
+            android:text="0:34"
+            android:textColor="@color/white"/>
 
         <com.google.android.material.slider.Slider
             android:layout_width="0dp"
@@ -66,7 +71,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3:20"/>
+            android:fontFamily="sans-serif-medium"
+            android:text="3:20"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
     <LinearLayout
