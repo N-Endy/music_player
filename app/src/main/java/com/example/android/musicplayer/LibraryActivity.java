@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 public class LibraryActivity extends AppCompatActivity {
@@ -57,12 +60,17 @@ public class LibraryActivity extends AppCompatActivity {
                 Library item = (Library) listView.getAdapter().getItem(arg2);
                 Log.d("LibraryActivity", "onItemClick: " + item.getArtisteName());
 
+                Bitmap bmp = BitmapFactory.decodeResource(getResources(), item.getImageResourceId());
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                byte[] byteArray = stream.toByteArray();
+
                 // Create a new intent to open {@link NumbersActivity}
                 Intent playSongIntent = new Intent(LibraryActivity.this, PlayActivity.class);
                 // Individual items from view
                 playSongIntent.putExtra("songTitle", item.getSongTitle());
                 playSongIntent.putExtra("artisteName", item.getArtisteName());
-                playSongIntent.putExtra("image", item.getImageResourceId());
+                playSongIntent.putExtra("image", byteArray);
                 // Start new activity
                 startActivity(playSongIntent);
             }
