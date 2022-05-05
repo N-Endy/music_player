@@ -8,17 +8,6 @@
     android:background="@color/black_background"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        style="@style/header"
-        android:background="@color/primary_background">
-
-        <TextView
-            style="@style/header_text"
-            android:text="@string/music_player"
-            android:textColor="@color/black_background"/>
-
-    </LinearLayout>
-
     <androidx.gridlayout.widget.GridLayout
         style="@style/grid">
 

@@ -7,7 +7,7 @@
     android:orientation="horizontal"
     android:minHeight="?android:attr/listPreferredItemHeight"
     android:padding="16dp"
-    android:background="#7E252323"
+    android:background="#670861"
     android:id="@+id/view_library">
 
     <ImageView

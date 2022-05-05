@@ -2,7 +2,12 @@ package com.example.android.musicplayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -36,5 +41,19 @@ public class LibraryActivity extends AppCompatActivity {
         // Get a reference to the ListView, and attach the adapter to the listView.
         ListView listView = findViewById(R.id.song_list);
         listView.setAdapter(libraryAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+                                    long arg3) {
+                // TODO Auto-generated method stub
+                // Create a new intent to open {@link NumbersActivity}
+                Intent playSongIntent = new Intent(LibraryActivity.this, PlayActivity.class);
+                // Start new activity
+                startActivity(playSongIntent);
+            }
+
+        });
     }
 }
