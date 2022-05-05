@@ -47,9 +47,16 @@ public class LibraryActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                                     long arg3) {
-                // TODO Auto-generated method stub
+                //Get the clicked view from the
+                Library item = (Library) listView.getAdapter().getItem(arg2);
+                Log.d("LibraryActivity", "onItemClick: " + item.getArtisteName());
+
                 // Create a new intent to open {@link NumbersActivity}
                 Intent playSongIntent = new Intent(LibraryActivity.this, PlayActivity.class);
+                // Individual items from view
+                playSongIntent.putExtra("songTitle", item.getSongTitle());
+                playSongIntent.putExtra("artisteName", item.getArtisteName());
+                playSongIntent.putExtra("image", item.getImageResourceId());
                 // Start new activity
                 startActivity(playSongIntent);
             }

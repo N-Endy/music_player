@@ -51,7 +51,7 @@ import java.util.ArrayList;
                         R.layout.activity_library, parent, false);
             }
 
-            // Get the {@link AndroidFlavor} object located at this position in the list
+            // Get the {@link Library} object located at this position in the list
             Library currentLibrary = getItem(position);
 
             // Find the TextView in the activity_library.xml layout with the ID song_title
