@@ -25,22 +25,22 @@ public class LibraryActivity extends AppCompatActivity {
 
         // Create an ArrayList of Library objects
         ArrayList<Library> songs = new ArrayList<>();
-        songs.add(new Library("Easy On Me", "Adele", R.drawable.mostplay));
-        songs.add(new Library("Jon Bellion", "All Time Low", R.drawable.mostplay));
-        songs.add(new Library("Chike", "Amen", R.drawable.mostplay));
-        songs.add(new Library("Novo Amor", "Anchor", R.drawable.mostplay));
-        songs.add(new Library("Calum Scott", "Dancing On My Own", R.drawable.mostplay));
-        songs.add(new Library("Simi", "Duduke", R.drawable.mostplay));
-        songs.add(new Library("Wizkid", "Essence", R.drawable.mostplay));
-        songs.add(new Library("Ladipoe (feat Buju)", "Feeling", R.drawable.mostplay));
-        songs.add(new Library("Harry Styles", "Watermelon", R.drawable.mostplay));
-        songs.add(new Library("Tems", "Interference", R.drawable.mostplay));
-        songs.add(new Library("Labrinth", "Jealous", R.drawable.mostplay));
-        songs.add(new Library("Joeboy", "Lonely", R.drawable.mostplay));
-        songs.add(new Library("James Authur", "Naked", R.drawable.mostplay));
-        songs.add(new Library("Burna Boy", "Onyeka", R.drawable.mostplay));
-        songs.add(new Library("The Weekend", "I Feel It Coming", R.drawable.mostplay));
-        songs.add(new Library("Travis Greene", "Made A Way", R.drawable.mostplay));
+        songs.add(new Library("Easy On Me", "Adele", R.drawable.adele));
+        songs.add(new Library("Jon Bellion", "All Time Low", R.drawable.cover1));
+        songs.add(new Library("Chike", "Amen", R.drawable.cover3));
+        songs.add(new Library("Novo Amor", "Anchor", R.drawable.novoamor));
+        songs.add(new Library("Calum Scott", "Dancing On My Own", R.drawable.cover2));
+        songs.add(new Library("Simi", "Duduke", R.drawable.cover1));
+        songs.add(new Library("Wizkid", "Essence", R.drawable.wizkid));
+        songs.add(new Library("Ladipoe (feat Buju)", "Feeling", R.drawable.cover3));
+        songs.add(new Library("Harry Styles", "Watermelon", R.drawable.harry));
+        songs.add(new Library("Tems", "Interference", R.drawable.cover1));
+        songs.add(new Library("Labrinth", "Jealous", R.drawable.labrinth));
+        songs.add(new Library("Joeboy", "Lonely", R.drawable.cover3));
+        songs.add(new Library("James Authur", "Naked", R.drawable.cover2));
+        songs.add(new Library("Burna Boy", "Onyeka", R.drawable.burna));
+        songs.add(new Library("The Weekend", "I Feel It Coming", R.drawable.weekend));
+        songs.add(new Library("Travis Greene", "Made A Way", R.drawable.travis));
 
         // Create an {@link LibraryAdapter}, whose data source is a list of
         // {@link Library}s. The adapter knows how to create list item views for each item
@@ -60,17 +60,12 @@ public class LibraryActivity extends AppCompatActivity {
                 Library item = (Library) listView.getAdapter().getItem(arg2);
                 Log.d("LibraryActivity", "onItemClick: " + item.getArtisteName());
 
-                Bitmap bmp = BitmapFactory.decodeResource(getResources(), item.getImageResourceId());
-                ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
-                byte[] byteArray = stream.toByteArray();
-
-                // Create a new intent to open {@link NumbersActivity}
+                // Create a new intent to open {@link PlayActivity}
                 Intent playSongIntent = new Intent(LibraryActivity.this, PlayActivity.class);
                 // Individual items from view
                 playSongIntent.putExtra("songTitle", item.getSongTitle());
                 playSongIntent.putExtra("artisteName", item.getArtisteName());
-                playSongIntent.putExtra("image", byteArray);
+                playSongIntent.putExtra("image", item.getImageResourceId());
                 // Start new activity
                 startActivity(playSongIntent);
             }
