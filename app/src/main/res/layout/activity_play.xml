@@ -26,6 +26,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
+        android:id="@+id/play_song_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -35,6 +36,7 @@
         android:text="To Build A Home"/>
 
     <TextView
+        android:id="@+id/play_song_artiste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
