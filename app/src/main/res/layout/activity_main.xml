@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/black_background"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <androidx.gridlayout.widget.GridLayout
@@ -26,9 +26,9 @@
 
                 <TextView
                     android:id="@+id/home_album_text"
+                    style="@style/textViewStyle"
                     android:layout_below="@id/home_album_image"
                     android:text="@string/albums"
-                    style="@style/textViewStyle"
                     android:textColor="@color/black" />
 
             </RelativeLayout>
@@ -50,9 +50,9 @@
 
                 <TextView
                     android:id="@+id/home_library_text"
+                    style="@style/textViewStyle"
                     android:layout_below="@id/home_library_image"
                     android:text="@string/library"
-                    style="@style/textViewStyle"
                     android:textColor="@color/black"/>
 
             </RelativeLayout>
@@ -73,9 +73,9 @@
 
                 <TextView
                     android:id="@+id/home_favorite_text"
+                    style="@style/textViewStyle"
                     android:layout_below="@id/home_favorite_image"
                     android:text="@string/favorite"
-                    style="@style/textViewStyle"
                     android:textColor="@color/black" />
 
             </RelativeLayout>
@@ -96,9 +96,9 @@
 
                 <TextView
                     android:id="@+id/home_recentplay_text"
+                    style="@style/textViewStyle"
                     android:layout_below="@id/home_recentplay_image"
                     android:text="@string/recent_play"
-                    style="@style/textViewStyle"
                     android:textColor="@color/black" />
 
             </RelativeLayout>
