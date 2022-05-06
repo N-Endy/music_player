@@ -11,16 +11,19 @@
         android:theme="@style/Theme.MusicPlayer">
         <activity
             android:name=".PlayActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Now Playing"/>
         <activity
             android:name=".song_list"
             android:exported="false" />
         <activity
             android:name=".AlbumActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Album List"/>
         <activity
             android:name=".LibraryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Song List"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
